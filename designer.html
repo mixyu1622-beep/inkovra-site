@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Online Designer | INKOVRA</title><meta name="description" content="Design your own custom tee, hoodie, mug, stocking or home goods online with INKOVRA."><meta property="og:title" content="Online Designer | INKOVRA"><meta property="og:image" content="https://inkovra.com/assets/mockup1_family-christmas-crew-2026.jpg"><link rel="stylesheet" href="css/style.css"><style>
+.dz{display:grid;grid-template-columns:260px 1fr 260px;gap:16px;align-items:start}.dz .pn{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px}
+.dz label{display:block;margin:8px 0;font-size:14px}.dz select,.dz input[type=text],.dz input[type=number]{width:100%}.sw{display:flex;flex-wrap:wrap;gap:6px}.sw button{width:30px;height:30px;border-radius:50%;border:2px solid #555;cursor:pointer}.sw button.on{border-color:#39ff88;box-shadow:0 0 0 2px #39ff88}
+#cv{width:100%;max-width:600px;aspect-ratio:1;touch-action:none;background:#f3f3f3;border-radius:12px;display:block;margin:auto}.tabs{display:flex;gap:8px;justify-content:center;margin:8px}.tabs button.on{background:#39ff88;color:#000}
+.dz .btn{width:100%;margin-top:6px}.ly div{display:flex;justify-content:space-between;padding:4px 6px;border-radius:6px;cursor:pointer;font-size:13px}.ly div.on{background:rgba(57,255,136,.2)}
+@media(max-width:900px){.dz{grid-template-columns:1fr}.dz .mid{order:-1}}</style></head><body>
+<header class="top"><a class="logo" href="index.html">INK<span>OVRA</span></a><button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button><nav><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="custom.html">Custom Design</a><a href="designer.html" class=on>Online Designer</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="checkout.html" class="cartlink">Cart (<span id="cc">0</span>)</a></nav></header>
+<main><section class="ph-head"><h1>Online <span class="neon">Designer</span></h1><p class="lead">Pick a blank, drop in your photo or text, then add to cart.</p></section>
+<section class="dz">
+<div class="pn"><label>Product<select id="prod"></select></label><label>Color</label><div class="sw" id="colors"></div>
+<label>Size<select id="size"></select></label><label>Quantity<input type="number" id="qty" min="1" value="1"></label>
+<label>Upload image(s)<input type="file" id="up" accept="image/*" multiple></label>
+<label>Add text<input type="text" id="txt" maxlength="40" placeholder="Your text"></label>
+<div class="two"><label>Font<select id="font"><option>Arial Black</option><option>Georgia</option><option>Impact</option><option>Courier New</option><option>Brush Script MT</option><option>Verdana</option></select></label><label>Color<input type="color" id="tcol" value="#e11d48"></label></div>
+<button class="btn ghost" id="addtxt">+ Add text</button></div>
+<div class="mid"><div class="tabs" id="sides"><button class="chip on" data-s="front">Front</button><button class="chip" data-s="back">Back</button></div><canvas id="cv" width="600" height="600"></canvas><p class="muted" style="text-align:center">Drag to move · drag ◢ corner to scale · drag ⟳ to rotate. Dashed box = print area.</p></div>
+<div class="pn"><b>Layers</b><div class="ly" id="layers"></div>
+<label>Size <input type="range" id="sc" min="0.1" max="3" step="0.01"></label><label>Rotate <input type="range" id="ro" min="-180" max="180" step="1"></label>
+<div class="row"><button class="chip" id="up1">Forward</button><button class="chip" id="dn1">Back</button><button class="chip" id="del">Delete</button></div>
+<button class="btn ghost" id="dl">Download preview PNG</button><button class="btn" id="add">Add to cart</button><p id="added" class="ok" hidden>Added to cart. <a href="checkout.html">Go to checkout →</a></p><p class="muted" id="warn"></p></div>
+</section></main>
+<footer><div class="logo">INK<span>OVRA</span></div><div class="social" data-social></div><p class="muted">© 2026 INKOVRA · inkovra.com</p></footer>
+<script src="js/config.js"></script><script src="js/main.js"></script><script src="js/designer.js"></script></body></html>
